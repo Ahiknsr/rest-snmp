@@ -59,7 +59,7 @@ class Status(Resource):
         state = str(pdu.state_from_oid(oid))
         print state
         try:
-            return { 'Sataus' : state_dict[state] }
+            return { 'Status' : state_dict[state] }
         except KeyError:
             if 'No SNMP response' in state:
                 return { 'Error' : 'unable to connect to Pdu' }
